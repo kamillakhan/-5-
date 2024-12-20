@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #3b3b3b; /* Устанавливаем фон страницы */
+  color: white;
+}
+
+.animation-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 блока в одной строке */
+  grid-gap: 10px; /* промежутки между блоками */
+  margin: 20px;
+}
+
+.animation-block {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-block.active {
+  border: 3px solid #ccc; /* Выделяем активное движение */
+}
+
+.animation-block video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+}
+
+.movement-title {
+  position: absolute;
+  top: 0; /* Перемещаем в левый верхний угол */
+  left: 0; /* Перемещаем в левый верхний угол */
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(195, 184, 184); /* Белый цвет для контраста */
+  z-index: 2; /* Название поверх видео */
+  background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для читаемости */
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Промежутки между кнопками */
+  align-items: center;
+}
+
+.controls label {
+  font-weight: bold;
+  color: white;
+}
+
+button {
+  background-color: #5c5c5c; /* Цвет фона кнопки */
+  color: white; /* Белый текст */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #777777; /* Цвет кнопки при наведении */
+}
+
+input[type="range"] {
+  width: 200px;
+  margin: 0 10px;
+  background-color: #444; /* Цвет фона ползунка */
+  border-radius: 5px;
+  cursor: pointer;
+  height: 8px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #888;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: #bbb; /* Цвет ползунка при наведении */
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  background-color: #777; /* Цвет ползунка при фокусе */
+}
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Сальса Тренажёр</title>
+</head>
+<body>
+  <h1>Тренажёр для Сальсы</h1>
+  <div class="animation-container">
+    <div class="animation-block" data-movement="base_step">
+      <span class="movement-title">Base Step</span>
+      <video class="animation-video" data-view="front" src="/blender/base_step_front.mp4" preload="auto" muted loop></video>
+    </div>
+    <div class="animation-block" data-movement="side_step">
+      <span class="movement-title">Side Step</span>
+      <video class="animation-video" data-view="front" src="/blender/side_step_front.mp4" preload="auto" muted loop></video>
+    </div>
+    <div class="animation-block" data-movement="back_step">
+      <span class="movement-title">Back Step</span>
+      <video class="animation-video" data-view="front" src="/blender/back_step_front.mp4" preload="auto" muted loop></video>
+    </div>
+    <div class="animation-block" data-movement="pivot_turn">
+      <span class="movement-title">Pivot turn</span>
+      <video class="animation-video" data-view="front" src="/blender/pivot_turn_front.mp4" preload="auto" muted loop></video>
+    </div>
+    <!-- Блоки для движений вниз -->
+    <div class="animation-block" data-movement="mambo">
+      <span class="movement-title">Mambo Step</span>
+      <video class="animation-video" data-view="front" src="/blender/mambo_front.mp4" preload="auto" muted loop></video>
+    </div>
+    <div class="animation-block" data-movement="double_turn">
+      <span class="movement-title">Double Turn</span>
+      <video class="animation-video" data-view="front" src="/blender/double_turn_front.mp4" preload="auto" muted loop></video>
+    </div>
+    <div class="animation-block" data-movement="exhibela">
+      <span class="movement-title">Exhibela</span>
+      <video class="animation-video" data-view="front" src="/blender/exhibela_front.mp4" preload="auto" muted loop></video>
+    </div>
+    <div class="animation-block" data-movement="suzie_q">
+      <span class="movement-title">Suzie Q</span>
+      <video class="animation-video" data-view="front" src="/blender/suzie_q_front.mp4" preload="auto" muted loop></video>
+    </div>
+  </div>
+  <div class="controls">
+    <label for="speed">Скорость:</label>
+    <input type="range" id="speed" min="0.5" max="2" step="0.1" value="1">
+    <span id="bpm-display">120 BPM</span>
+    <button id="start">Запустить</button>
+    <button id="stop">Остановить</button>
+    <button id="switch-view">Переключить вид</button>
+  </div>
+  <audio id="metronome" src="/blender/Metronome 120.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
